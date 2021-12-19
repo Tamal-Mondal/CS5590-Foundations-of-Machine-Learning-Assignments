@@ -1,0 +1,109 @@
+
+=============================10 fold cross-Validation results for the decision tree
+Height of the tree for fold-1 : 23
+Accuracy for fold-1 is 0.8360655737704918
+Height of the tree for fold-2 : 22
+Accuracy for fold-2 is 0.8565573770491803
+Height of the tree for fold-3 : 28
+Accuracy for fold-3 is 0.8278688524590164
+Height of the tree for fold-4 : 23
+Accuracy for fold-4 is 0.8360655737704918
+Height of the tree for fold-5 : 22
+Accuracy for fold-5 is 0.8299180327868853
+Height of the tree for fold-6 : 23
+Accuracy for fold-6 is 0.8545081967213115
+Height of the tree for fold-7 : 22
+Accuracy for fold-7 is 0.8401639344262295
+Height of the tree for fold-8 : 25
+Accuracy for fold-8 is 0.8586065573770492
+Height of the tree for fold-9 : 20
+Accuracy for fold-9 is 0.8278688524590164
+Height of the tree for fold-10 : 22
+Accuracy for fold-10 is 0.8360655737704918
+Average accuracy: 0.8395
+
+==========================================Results using Gini index
+Height of the tree for fold-1 : 23
+Accuracy for fold-1 is 0.7868852459016393
+Height of the tree for fold-2 : 23
+Accuracy for fold-2 is 0.7848360655737705
+Height of the tree for fold-3 : 23
+Accuracy for fold-3 is 0.7848360655737705
+Height of the tree for fold-4 : 23
+Accuracy for fold-4 is 0.7889344262295082
+Height of the tree for fold-5 : 23
+Accuracy for fold-5 is 0.7868852459016393
+Height of the tree for fold-6 : 23
+Accuracy for fold-6 is 0.7848360655737705
+Height of the tree for fold-7 : 23
+Accuracy for fold-7 is 0.7848360655737705
+Height of the tree for fold-8 : 23
+Accuracy for fold-8 is 0.7827868852459017
+Height of the tree for fold-9 : 23
+Accuracy for fold-9 is 0.7868852459016393
+Height of the tree for fold-10 : 23
+Accuracy for fold-10 is 0.7848360655737705
+Average accuracy: 0.7857
+
+====================================Results using Pre-pruning with entropy
+Height of the tree for fold-1 : 23
+Accuracy for fold-1 is 0.8360655737704918
+Height of the tree for fold-2 : 22
+Accuracy for fold-2 is 0.8565573770491803
+Height of the tree for fold-3 : 23
+Accuracy for fold-3 is 0.8278688524590164
+Height of the tree for fold-4 : 23
+Accuracy for fold-4 is 0.8360655737704918
+Height of the tree for fold-5 : 22
+Accuracy for fold-5 is 0.8299180327868853
+Height of the tree for fold-6 : 23
+Accuracy for fold-6 is 0.8545081967213115
+Height of the tree for fold-7 : 22
+Accuracy for fold-7 is 0.8401639344262295
+Height of the tree for fold-8 : 23
+Accuracy for fold-8 is 0.8586065573770492
+Height of the tree for fold-9 : 20
+Accuracy for fold-9 is 0.8278688524590164
+Height of the tree for fold-10 : 22
+Accuracy for fold-10 is 0.8360655737704918
+Average accuracy: 0.8404
+
+=====================================Results using Post-pruning with entropy
+Height of the tree before pruning for fold-1 : 23
+Accuracy before post-pruning is 0.8381147540983607 for fold-1
+Height of the tree after pruning for fold-1 : 22
+Accuracy after post-pruning is 0.8442622950819673 for fold-1
+Height of the tree before pruning for fold-2 : 23
+Accuracy before post-pruning is 0.8545081967213115 for fold-2
+Height of the tree after pruning for fold-2 : 21
+Accuracy after post-pruning is 0.8463114754098361 for fold-2
+Height of the tree before pruning for fold-3 : 23
+Accuracy before post-pruning is 0.8442622950819673 for fold-3
+Height of the tree after pruning for fold-3 : 23
+Accuracy after post-pruning is 0.8545081967213115 for fold-3
+Height of the tree before pruning for fold-4 : 22
+Accuracy before post-pruning is 0.8114754098360656 for fold-4
+Height of the tree after pruning for fold-4 : 21
+Accuracy after post-pruning is 0.8176229508196722 for fold-4
+Height of the tree before pruning for fold-5 : 23
+Accuracy before post-pruning is 0.8381147540983607 for fold-5
+Height of the tree after pruning for fold-5 : 21
+Accuracy after post-pruning is 0.8340163934426229 for fold-5
+Height of the tree before pruning for fold-6 : 19
+Accuracy before post-pruning is 0.8401639344262295 for fold-6
+Height of the tree after pruning for fold-6 : 18
+Accuracy after post-pruning is 0.8319672131147541 for fold-6
+Height of the tree before pruning for fold-7 : 31
+Accuracy before post-pruning is 0.8176229508196722 for fold-7
+Height of the tree after pruning for fold-7 : 30
+Accuracy after post-pruning is 0.8073770491803278 for fold-7
+Height of the tree before pruning for fold-8 : 26
+Accuracy before post-pruning is 0.8032786885245902 for fold-8
+Height of the tree after pruning for fold-8 : 24
+Accuracy after post-pruning is 0.805327868852459 for fold-8
+Height of the tree before pruning for fold-9 : 28
+Accuracy before post-pruning is 0.8094262295081968 for fold-9
+Height of the tree after pruning for fold-9 : 25
+Accuracy after post-pruning is 0.8258196721311475 for fold-9
+Average accuracy before post-pruning: 0.8286
+Average accuracy after post-pruning: 0.8297

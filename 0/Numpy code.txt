@@ -1,0 +1,113 @@
+import numpy as np
+
+# craete NULL vector of size 10
+a = np.zeros(10)
+print(a)
+
+# set 5th element "1"
+a[4] = 1
+print(a)
+
+# Reverse array over Horizontal axis
+b = np.array([[2, 4, 5, 6], [1, 5, 8, 1]])
+print(b)
+b = np.flip(b, axis = 1)
+print(b)
+
+# Create an n x n array with checkerboard pattern of zeros and ones
+def buildChessBoard(n):
+  cb = np.zeros((n, n), dtype = int)
+  cb[::2, 1::2] = 1
+  cb[1::2, ::2] = 1
+  print(cb)
+
+buildChessBoard(5)
+buildChessBoard(10)
+
+# Given an n x n array, sort the rows of array according to mth column of array
+def sortNumpyArray(array, m, row = True):
+  print(array)
+  if row:
+    indexs = array[m, :].argsort()
+    array = array[:, indexs]
+  else:
+    indexs = array[:, m].argsort()
+    array = array[indexs, :]
+  print(array)
+
+array = np.random.randint(100, size=(5, 4))
+sortNumpyArray(array, 2, True)
+
+# Create an n x n array with (i + j)th-entry equal to i + j
+array = np.fromfunction(lambda i, j: (i+j), (5, 4), dtype = int)
+print(array)
+
+# Consider a (6, 7, 8) shape array, what is the index (x, y, z) of the 100th element (of the entire structure)?
+index = np.unravel_index(99, (6, 7, 8))
+print(index)
+
+# Multiply a 5 x 3 matrix by a 3 x 2 matrix (real matrix product)
+array_1 = np.random.randint(10, size=(5, 3))
+array_2 = np.random.randint(10, size=(3, 2))
+print(array_1)
+print(array_2)
+print(np.matmul(array_1, array_2), sep = " ")
+
+# Create random vector of size 10 and replace the maximum value by 0
+array = np.random.randint(10, size=(10))
+array[array.argmax()] = 0
+print(array)
+
+# How to find the closest value (to a given scalar) in an array?
+def find_nearest(array, value):
+    idx_1 = (np.abs(array - value)).argmin()
+    return array.flatten()[idx_1]
+
+array = np.random.randint(100, size=(6, 6))
+print(array)
+print(find_nearest(array, 50))
+print(find_nearest(array, 60))
+
+# Subtract the mean of each row from each corresponding row of a matrix
+print("Original matrix:\n")
+array = np.random.randint(10, size=(5, 5))
+print(array)
+print("\nSubtract the mean of each row of the said matrix:\n")
+array = array - array.mean(axis = 1, keepdims = True)
+print(array)
+
+
+# Consider a given vector, how to add 1 to each element indexed by a second vector (be careful with repeated 
+# indices - you should consider it only once)?
+Z = np.random.randint(0,15,10)
+I = np.random.randint(0,len(Z),20)
+temp = np.bincount(I, minlength=len(Z))
+f = lambda x: int(x > 0)
+vf = np.vectorize(f)
+temp = vf(temp)
+print(Z)
+print(I)
+print(temp)
+Z = Z + temp
+print(Z)
+
+# How to find the most frequent value in an array?
+array = np.random.randint(0,10,50)
+print (array)
+print('Most frequent element: ', np.bincount(array).argmax())
+
+# Extract all the contiguous 3 x 3 blocks from a random 10 x 10 matrix
+Z = np.random.randint(0,5,(10,10))
+n = 3
+i = 1 + (Z.shape[0]-3)
+j = 1 + (Z.shape[1]-3)
+C = np.lib.stride_tricks.as_strided(Z, shape=(i, j, n, n), strides=Z.strides + Z.strides)
+print(C)
+
+# Compute the rank, trace and determinant of a matrix.
+A = np.array([[6, 1, 1],
+              [4, -2, 5],
+              [2, 8, 7]])
+print("Rank of A:", np.linalg.matrix_rank(A))
+print("\nTrace of A:", np.trace(A))
+print("\nDeterminant of A:", np.linalg.det(A))
